@@ -1,4 +1,6 @@
 import draw from "../utils/draw.js";
+import hit from "../utils/hit.js";
+
 
 export default class BoardView{ //Vista del tablero
 
@@ -15,10 +17,20 @@ export default class BoardView{ //Vista del tablero
     }
 
     draw(){
-        //print element
         for(let i =  this.board.elements.length -1 ; i >= 0; i--) {
             let elementOfBoard = this.board.elements[i];
             draw(this.ctx, elementOfBoard);
+        }
+    }
+
+    checkCollision(){
+        for (let i = this.board.bars.length - 1; i >= 0 ; i--) {
+
+            let bar = this.board.bars[i];
+
+            if(hit(bar,this.board.ball)){ //Validar colisison entre elementos
+                this.board.ball.collision(bar);
+            }
         }
     }
 
@@ -27,6 +39,7 @@ export default class BoardView{ //Vista del tablero
         if(this.board.playing){
             this.clean();
             this.draw();
+            this.checkCollision();
             this.board.ball.move();
         }
     }

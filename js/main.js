@@ -44,7 +44,7 @@ document.addEventListener('keydown',(event)=>{
 window.requestAnimationFrame(controller);
 
 function controller(){
-    //init play
+
     boardView.play();
     window.requestAnimationFrame(controller)
 }
