@@ -33,6 +33,9 @@ document.addEventListener('keydown',(event)=>{
         barRight.up();
     }else if(event.key=="ArrowDown"){
         barRight.down();
+    }else if(event.keyCode==32){
+        event.preventDefault();
+        board.playing = !board.playing;
     }
 })
 

@@ -8,14 +8,14 @@ export default class Ball{
         this.speedY = 0;
         this.speedX = 3;
         this.kind = "circle";
-        this.direction = 1;
+        this.direction = 1; // Direccion hacia la derecha.
 
         board.ball = this;
     }
 
     move(){
 
-        //this.x += this.speedX * this.direction;
+        this.x += this.speedX * this.direction;
         this.y += this.speedY;
 
         if(this.y + this.radius > this.board.getHeight ||

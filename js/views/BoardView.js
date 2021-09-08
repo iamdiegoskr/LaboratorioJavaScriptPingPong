@@ -23,9 +23,12 @@ export default class BoardView{ //Vista del tablero
     }
 
     play(){
-        this.clean();
-        this.draw();
-        this.board.ball.move();
+
+        if(this.board.playing){
+            this.clean();
+            this.draw();
+            this.board.ball.move();
+        }
     }
 
 }
