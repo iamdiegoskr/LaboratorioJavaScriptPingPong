@@ -15,6 +15,4 @@ export default function draw(ctx, element){ //Element can be rectangle or circle
                 break;
         }
     }
-
-
 }

@@ -16,7 +16,6 @@ export default class BoardView{ //Vista del tablero
             let elementOfBoard = this.board.elements[i];
             draw(this.ctx, elementOfBoard);
         }
-
     }
 
 }
