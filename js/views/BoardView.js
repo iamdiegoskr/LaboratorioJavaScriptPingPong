@@ -1,3 +1,5 @@
+import draw from "../utils/draw";
+
 export default class BoardView{ //Vista del tablero
 
     constructor(canvas, board){
