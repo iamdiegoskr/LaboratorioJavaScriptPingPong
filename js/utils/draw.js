@@ -2,7 +2,7 @@ export default function draw(ctx, element){ //Element can be rectangle or circle
 
         switch(element.kind){
             case "rectangle":
-                ctx.fillStyle = "red";
+                ctx.fillStyle = "purple";
                 ctx.fillRect(element.x, element.y, element.width, element.height);
                 break;
             case "circle":

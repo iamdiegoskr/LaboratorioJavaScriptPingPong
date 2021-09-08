@@ -5,10 +5,13 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body{
+    background: #14152d;
+}
+
 canvas{
-    box-shadow: 2px 2px 8px 2px #988c8c;
-    background: #1be4a0;
-    margin-top: 60px;
+    border: 2px solid white;
+    margin-top: 20px;
 }
 
 .container-canvas{
@@ -23,5 +26,62 @@ canvas{
     padding: 20px;
     text-align: center;
     letter-spacing: 3px;
-    text-shadow: 3px 1px 0px #079c6a;
+    text-shadow: 6px 1px 0px #730794;
+    color: white;
+}
+
+
+.score-board {
+    position: relative;
+    width: 70%;
+    min-width: 220px;
+    max-width: 380px;
+    height: 80px;
+    margin: 30px auto;
+    border: 2px solid #fff;
+    border-radius: 6px;
+    box-shadow: 2px 2px 18px 2px rgb(115 7 148);
+}
+
+.score-board .badge {
+    width: 110px;
+    height: auto;
+    padding: 4px 6px;
+    text-align: center;
+    background: rgb(115 7 148);
+    color: #fff;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 4px;
+}
+
+.badge-user {
+    position: absolute;
+    top: calc(50% - 10px);
+    left: -55px;
+}
+
+.badge-computer {
+    position: absolute;
+    top: calc(50% - 10px);
+    right: -55px;
+}
+
+
+.table-score {
+    text-align: center;
+    line-height: 80px;
+    color: #fff;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.result p {
+    text-align: center;
+    color: #FFf;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
 }

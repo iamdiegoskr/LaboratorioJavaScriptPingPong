@@ -48,6 +48,13 @@ export default class Ball{
             this.speedY = -this.speedY;
         }
 
+        if(this.x + this.radius < 0){
+            console.log("Computador gana");
+        }else if(this.x + this.radius > this.board.getWidth){
+            console.log("User gana");
+        }
+
+
     }
 
 

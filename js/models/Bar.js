@@ -14,12 +14,10 @@ export default class Bar{
 
     up(){
         this.y -= this.speed;
-        console.log(this.y);
     }
 
     down(){
         this.y += this.speed;
-        console.log(this.y);
     }
 
 
