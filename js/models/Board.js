@@ -1,4 +1,4 @@
-export default class Board{
+export default class Board{ //Tablero
 
     constructor(width,height){
         this.width = width;
