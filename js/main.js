@@ -15,7 +15,7 @@ let barRight = new Bar(770,positionMiddleY,20,100,"red",board)
 
 let boardView = new BoardView(canvas, board);
 
-let ball = new Ball(350,100,10, board);
+let ball = new Ball(board.getWidth/2,board.getHeight/2,10, board);
 
 boardView.draw();
 
