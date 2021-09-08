@@ -1,3 +1,5 @@
+import resetBall from "../utils/reset.js";
+
 export default class Ball{
 
     constructor(x,y,radius,board){
@@ -50,8 +52,14 @@ export default class Ball{
 
         if(this.x + this.radius < 0){
             console.log("Computador gana");
+
+            resetBall(this);
+
         }else if(this.x + this.radius > this.board.getWidth){
             console.log("User gana");
+
+            resetBall(this);
+
         }
 
 
