@@ -20,7 +20,7 @@ export default class Board{ //Tablero
     get elements(){
 
         let elements = this.bars.map((element)=>element); //Paso una copia y no la referencia
-        //elements.push(this.ball)
+        elements.push(this.ball)
         return elements;
 
     }
