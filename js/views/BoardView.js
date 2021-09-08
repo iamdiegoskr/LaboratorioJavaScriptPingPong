@@ -1,4 +1,4 @@
-import draw from "../utils/draw";
+import draw from "../utils/draw.js";
 
 export default class BoardView{ //Vista del tablero
 
@@ -12,7 +12,6 @@ export default class BoardView{ //Vista del tablero
 
 
     draw(){
-
         for(let i =  this.board.elements.length -1 ; i >= 0; i--) {
             let elementOfBoard = this.board.elements[i];
             draw(this.ctx, elementOfBoard);
