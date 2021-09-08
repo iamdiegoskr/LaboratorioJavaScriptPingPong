@@ -1,5 +1,5 @@
 export default function draw(ctx, element){ //Element can be rectangle or circle
-    if(element!=null && element.hasOwnProperty("kind")){
+
         switch(element.kind){
             case "rectangle":
                 ctx.fillStyle = "black";
@@ -14,5 +14,5 @@ export default function draw(ctx, element){ //Element can be rectangle or circle
                 ctx.closePath();
                 break;
         }
-    }
+
 }

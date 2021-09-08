@@ -17,6 +17,7 @@ let boardView = new BoardView(canvas, board);
 boardView.draw();
 
 
+//Evento para escuchar cuando una tecla es presionada.
 document.addEventListener('keydown',(event)=>{
 
     event.preventDefault();
@@ -31,3 +32,14 @@ document.addEventListener('keydown',(event)=>{
         barRight.down();
     }
 })
+
+
+
+window.requestAnimationFrame(controller);
+
+function controller(){
+    //init play
+    boardView.play();
+    window.requestAnimationFrame(controller)
+}
+
