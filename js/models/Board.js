@@ -9,6 +9,14 @@ export default class Board{ //Tablero
         this.ball = null;
     }
 
+    get getWidth(){
+        return this.width;
+    }
+
+    get getHeight(){
+        return this.height;
+    }
+
     get elements(){
 
         let elements = this.bars.map((element)=>element); //Paso una copia y no la referencia
