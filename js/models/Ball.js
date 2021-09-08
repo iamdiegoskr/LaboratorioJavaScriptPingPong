@@ -43,7 +43,7 @@ export default class Ball{
         this.y += this.speedY;
 
         if(this.y + this.radius > this.board.getHeight ||
-            this.y + this.radius < 0 ){
+            this.y + this.radius <= 20 ){
 
             this.speedY = -this.speedY;
         }

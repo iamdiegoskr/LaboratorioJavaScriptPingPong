@@ -1,4 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
 canvas{
-    border: solid;
+    box-shadow: 2px 2px 8px 2px #988c8c;
     background: #1be4a0;
+    margin-top: 60px;
+}
+
+.container-canvas{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+.title-space{
+    font-size: 1.4em;
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 3px;
+    text-shadow: 3px 1px 0px #079c6a;
 }
