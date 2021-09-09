@@ -1,6 +1,6 @@
+import { sounds } from "../main.js";
 import draw from "../utils/draw.js";
 import hit from "../utils/hit.js";
-
 
 export default class BoardView{ //Vista del tablero
 
@@ -29,6 +29,7 @@ export default class BoardView{ //Vista del tablero
             let bar = this.board.bars[i];
 
             if(hit(bar,this.board.ball)){ //Validar colisison entre elementos
+                sounds.hit.play();
                 this.board.ball.collision(bar);
             }
         }

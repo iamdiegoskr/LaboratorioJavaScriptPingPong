@@ -3,6 +3,9 @@ import Bar from "./models/Bar.js";
 import Board from "./models/Board.js";
 import BoardView from "./views/BoardView.js";
 
+export let sounds = {
+    hit: new Audio('https://s3.amazonaws.com/freecodecamp/simonSound1.mp3')
+}
 
 let canvas = document.getElementById("canvas");
 let board = new Board(800,400);

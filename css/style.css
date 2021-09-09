@@ -116,3 +116,11 @@ canvas{
     color: #43a2ea;
     font-weight: bold;
 }
+
+
+h1{
+    color: #fff;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 30px;
+}
