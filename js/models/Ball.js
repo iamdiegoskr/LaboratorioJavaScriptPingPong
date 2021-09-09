@@ -1,4 +1,10 @@
-import resetBall from "../utils/reset.js";
+import { winner } from "../main.js";
+import {resetBall} from "../utils/reset.js";
+
+let scoreUserText = document.getElementById("userScore");
+let scoreUser2Text = document.getElementById("computerScore");
+let scoreUser = 0;
+let scoreUser2 = 0
 
 export default class Ball{
 
@@ -7,9 +13,9 @@ export default class Ball{
         this.y = y;
         this.radius = radius;
         this.board = board;
-        this.speed = 5;
+        this.speed = 8;
         this.speedY = 0;
-        this.speedX = 3;
+        this.speedX = 5;
         this.kind = "circle";
         this.direction = 1; // Direccion hacia la derecha.
         this.bounce_angle = 0;
@@ -40,7 +46,6 @@ export default class Ball{
     }
 
     move(){
-
         this.x += this.speedX * this.direction;
         this.y += this.speedY;
 
@@ -51,18 +56,25 @@ export default class Ball{
         }
 
         if(this.x + this.radius < 0){
-            console.log("Computador gana");
 
+            scoreUser2Text.innerHTML = ++scoreUser2;
+
+            if(scoreUser2==3){
+                resetGameScore()
+                winner("user2")
+            }
             resetBall(this);
 
         }else if(this.x + this.radius > this.board.getWidth){
-            console.log("User gana");
 
+            scoreUserText.innerHTML = ++scoreUser;
+
+            if(scoreUser==3){
+                resetGameScore()
+                winner("user1")
+            }
             resetBall(this);
-
         }
-
-
     }
 
 
@@ -74,4 +86,12 @@ export default class Ball{
         return this.radius*2;
     }
 
+}
+
+function resetGameScore(){
+    //reset interface
+    scoreUserText.innerHTML = 0
+    scoreUser2Text.innerHTML = 0;
+    scoreUser = 0;
+    scoreUser2 = 0
 }
