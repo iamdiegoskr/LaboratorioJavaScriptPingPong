@@ -31,7 +31,7 @@ canvas{
     color: white;
 }
 
-
+/*Style score board*/
 .score-board {
     position: relative;
     width: 70%;
@@ -78,26 +78,11 @@ canvas{
     letter-spacing: 4px;
 }
 
-.result p {
-    text-align: center;
-    color: #FFf;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    margin-bottom: 30px;
-}
+/*Style score board*/
 
-.winner{
-    color: white;
-    font-size: 2.3em;
-    text-align: center;
-}
 
-.winner-span{
-    color: #8675ff;
-    font-weight: bold;
-}
 
+/*Style instructions*/
 .instructions{
     margin: 20px 60px;
     padding: 20px 40px;
@@ -117,6 +102,7 @@ canvas{
     font-weight: bold;
 }
 
+/*Style instructions*/
 
 h1{
     color: #fff;

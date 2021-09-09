@@ -49,6 +49,7 @@ export default class Ball{
         this.x += this.speedX * this.direction;
         this.y += this.speedY;
 
+        //Validamos la posicion en y para hacer rebotar la pelota, cambiando la direccion.
         if(this.y + this.radius > this.board.getHeight ||
             this.y + this.radius <= 20 ){
 
@@ -89,7 +90,6 @@ export default class Ball{
 }
 
 function resetGameScore(){
-    //reset interface
     scoreUserText.innerHTML = 0
     scoreUser2Text.innerHTML = 0;
     scoreUser = 0;
